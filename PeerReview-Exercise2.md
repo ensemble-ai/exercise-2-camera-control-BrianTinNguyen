@@ -73,10 +73,22 @@ ___
 
 ___
 #### Justification ##### 
-You're implementation works, it just took some fiddling around with the box corners to get it working right. You have it so that the top left corner has to be set to, lets use 5, x = -5 and y = 5, and the bottom right corner has to be set to x = 5 and y = -5. This doesn't logically make sense for the signs for the top left corner to be a positive y value, and same for having the bottom right have a negative x value. In the global position of the world, a negative x value should be to the left, and a negative y should be up. Conversely, a positive x should be right, and a positive y should be down. I am also assuming that the camera you are attempting to implement stage 2 is your PushBoxCamera2, and not PushBoxCamera4 despite both having autoscrolling features, and PushBoxCamera4 not working entirely correct for stage 2.
+You're implementation works, it just took some fiddling around with the box corners to get it working right. All the initial values for the exported fields were the default of 0, so I had to play around to figure out what number made it work. You have it so that the top left corner has to be set to, lets use 5, x = -5 and y = 5, and the bottom right corner has to be set to x = 5 and y = -5. This doesn't logically make sense for the signs for the top left corner to be a positive y value, and same for having the bottom right have a negative x value. In the global position of the world, a negative x value should be to the left, and a negative y should be up. Conversely, a positive x should be right, and a positive y should be down. I am also assuming that the camera you are attempting to implement stage 2 is your PushBoxCamera2, and not PushBoxCamera4 despite both having autoscrolling features, and PushBoxCamera4 not working entirely correct for stage 2.
 
 ___
 ### Stage 3 ###
+
+- [ ] Perfect
+- [ ] Great
+- [X] Good
+- [ ] Satisfactory
+- [ ] Unsatisfactory
+
+___
+#### Justification ##### 
+Again, since all the export fields are initialized to the default of 0, it took a lot of fiddling around with the values to get it working. It was very confusing because you have Box Width and Box Height export variables, which made it seem like this was a pushbox camera, but the camera works mostly right if the box dimensions are turned up really high. The leash does not seem to be implemented correctly, as no matter what I set it to, it will not limit the distance between the target and the camera. In your code you appear to just have the camera use lerp to calculate where the camera should go if the distance between the target and camera is greater than the leash, which does not really work to limit the distance. As well, the sign issues with the box corners from the previous stage apply here.
+___
+### Stage 4 ###
 
 - [ ] Perfect
 - [X] Great
@@ -86,20 +98,7 @@ ___
 
 ___
 #### Justification ##### 
-Write Justification here.
-
-___
-### Stage 4 ###
-
-- [ ] Perfect
-- [ ] Great
-- [ ] Good
-- [ ] Satisfactory
-- [ ] Unsatisfactory
-
-___
-#### Justification ##### 
-Write Justification here.
+Again again, it was unclear at first if your PushBoxCamera4 was supposed to be your Stage 4 camera, because, again, it took a lot of fiddling with the export values to get it to work. This one was especially confusing because there are a lot of exports that are irrelevant to this camera: Top Left, Bottom Right, Autoscroll Speed, Box Width, and Box Height. But, once I got it all set right, your camera works pretty well, the only issue I could find with it is that the catchup delay doesn't seem to be working right, as the camera simply moves to the target right away. 
 
 ___
 ### Stage 5 ###
@@ -108,11 +107,11 @@ ___
 - [ ] Great
 - [ ] Good
 - [ ] Satisfactory
-- [ ] Unsatisfactory
+- [X] Unsatisfactory
 
 ___
 #### Justification ##### 
-Write Justification here.
+With the exported fields set to the default values, I again had to fiddle around to try to get the camera to work, but I could not get it working. It does appear that the speedup zone works, as you can notice that the camera is slow at first, but once the target hits the pushbox, the target goes outside of the bounds and the camera does not do a good job of keeping up. As well, the camera always moves towards the target, even when the target is within the speedup zone, or not moving outside of it.
 ___
 # Code Style #
 

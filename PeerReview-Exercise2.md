@@ -129,9 +129,10 @@ Please refer to the first code review template on how to do a permalink.
 
 
 #### Style Guide Infractions ####
+* [Spacing Between Functions](https://github.com/ensemble-ai/exercise-2-camera-control-BrianTinNguyen/blob/103f15342d0ee8c8c2962dfa3aa69ba7bdd050cd/Obscura/scripts/camera_controllers/push_box.gd#L22) - there are not 2 blank lines between these functions. This occurs across all the script files you created.
 
 #### Style Guide Exemplars ####
-
+* [Member Order](https://github.com/ensemble-ai/exercise-2-camera-control-BrianTinNguyen/blob/103f15342d0ee8c8c2962dfa3aa69ba7bdd050cd/Obscura/scripts/camera_controllers/push_box4.gd#L4) - I want to commend you on how well you maintained the order of your member variables across all your files, with proper typing too, especially in this linked file where there are a lot of member variables.
 ___
 #### Put style guide infractures ####
 
@@ -149,5 +150,8 @@ If the student has breached the best practices and has done something that shoul
 This should be similar to the Code Style justification.
 
 #### Best Practices Infractions ####
-
+ * [Class Naming](https://github.com/ensemble-ai/exercise-2-camera-control-BrianTinNguyen/blob/103f15342d0ee8c8c2962dfa3aa69ba7bdd050cd/Obscura/scripts/camera_controllers/push_box.gd#L1) - Having all your cameras named so similarly and not having them being according to their functionallity makes it extremely confusing to read.
+ * [Poor Sign Convention](https://github.com/ensemble-ai/exercise-2-camera-control-BrianTinNguyen/blob/103f15342d0ee8c8c2962dfa3aa69ba7bdd050cd/Obscura/scripts/camera_controllers/push_box2.gd#L35) - The incorrect sign usage on your y values for Top Left and Bottom Right make difficult for others to use.
+ * [Excess Exports](https://github.com/ensemble-ai/exercise-2-camera-control-BrianTinNguyen/blob/103f15342d0ee8c8c2962dfa3aa69ba7bdd050cd/Obscura/scripts/camera_controllers/push_box4.gd#L6) - The excess exports in this camera that don't provide meaningful debugging info or just aren't relevant make the camera hard to use.
 #### Best Practices Exemplars ####
+* [Commenting](https://github.com/ensemble-ai/exercise-2-camera-control-BrianTinNguyen/blob/103f15342d0ee8c8c2962dfa3aa69ba7bdd050cd/Obscura/scripts/camera_controllers/push_box4.gd#L35) - The comments, across most of your files but most notably here, do a great job of breaking your code into sections and tell what the section does.

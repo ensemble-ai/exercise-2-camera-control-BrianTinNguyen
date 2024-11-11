@@ -21,8 +21,8 @@ If you are in a rare situation where two peer-reviewers are on a single reposito
 
 ## Peer-reviewer Information
 
-* *name:* [your name here] 
-* *email:* [your @ucdavis.edu email address here]
+* *name:* Nico Medina
+* *email:* dwmedina@ucdavis.edu
 
 ### Description ###
 
@@ -53,33 +53,33 @@ ___
 ### Stage 1 ###
 
 - [ ] Perfect
-- [ ] Great
+- [X] Great
 - [ ] Good
 - [ ] Satisfactory
 - [ ] Unsatisfactory
 
 ___
 #### Justification ##### 
-Write Justification here.
+The position lock camera works perfectly fine. You do have two fields exported, box_height and box_width that don't get used anywhere in that script file though, and the prompt does say to not have any other fields in the inspector.
 
 ___
 ### Stage 2 ###
 
 - [ ] Perfect
-- [ ] Great
+- [X] Great
 - [ ] Good
 - [ ] Satisfactory
 - [ ] Unsatisfactory
 
 ___
 #### Justification ##### 
-Write Justification here.
+You're implementation works, it just took some fiddling around with the box corners to get it working right. You have it so that the top left corner has to be set to, lets use 5, x = -5 and y = 5, and the bottom right corner has to be set to x = 5 and y = -5. This doesn't logically make sense for the signs for the top left corner to be a positive y value, and same for having the bottom right have a negative x value. In the global position of the world, a negative x value should be to the left, and a negative y should be up. Conversely, a positive x should be right, and a positive y should be down. I am also assuming that the camera you are attempting to implement stage 2 is your PushBoxCamera2, and not PushBoxCamera4 despite both having autoscrolling features, and PushBoxCamera4 not working entirely correct for stage 2.
 
 ___
 ### Stage 3 ###
 
 - [ ] Perfect
-- [ ] Great
+- [X] Great
 - [ ] Good
 - [ ] Satisfactory
 - [ ] Unsatisfactory
